@@ -106,15 +106,14 @@ class App extends React.Component {
   setSpeed(speed) {
     switch (speed) {
       case 1:
-        this.setState({ speed: 1000 });
+        this.setState({ speed: 1000 }, () => this.startGame());
         break;
       case 2:
-        this.setState({ speed: 500 });
+        this.setState({ speed: 500 }, () => this.startGame());
         break;
       default:
-        this.setState({ speed: 100 });
+        this.setState({ speed: 100 }, () => this.startGame());
     }
-    this.startGame();
   }
   render() {
     return (
