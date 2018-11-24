@@ -70,7 +70,6 @@ class App extends React.Component {
   getCurrentIndex(column, row) {
     return this.state.width * row + column;
   }
-  
   renderRow() {
     let rows = [];
     for (let i = 0; i < this.state.height; i++) {
@@ -120,15 +119,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.setSpeed.bind(this, 1)}>Slow</button>
-        <button onClick={this.setSpeed.bind(this, 2)}>Medium</button>
-        <button onClick={this.setSpeed.bind(this, 3)}>Fast</button>
-        <br />
-        <button onClick={this.randomizeBoard.bind(this)}>Randomize</button>
+        <div>
+          <button onClick={this.setSpeed.bind(this, 1)}>Slow</button>
+          <button onClick={this.setSpeed.bind(this, 2)}>Medium</button>
+          <button onClick={this.setSpeed.bind(this, 3)}>Fast</button>
+          <button onClick={this.randomizeBoard.bind(this)}>Randomize</button>
+        </div>
+        <h3>The Game of Life</h3>
         {this.renderRow()}
-        <span>Rows:</span>
+        <div className="input-label">Rows:</div>
         <input type="number" id="rows" />
-        <span>Columns:</span>
+        <div className="input-label">Columns:</div>
         <input type="number" id="columns" />
         <br />
         <button onClick={this.setDimensions.bind(this)}>
