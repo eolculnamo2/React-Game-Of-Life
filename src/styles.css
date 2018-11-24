@@ -1,0 +1,22 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.width-wrap {
+  display: flex;
+}
+
+.cell {
+  height: 10px;
+  width: 10px;
+  border: 1px solid black;
+}
+
+.alive {
+  background: #14e500;
+}
+
+.dead {
+  background: #095901;
+}
